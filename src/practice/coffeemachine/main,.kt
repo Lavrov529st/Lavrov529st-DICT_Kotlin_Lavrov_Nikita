@@ -2,32 +2,19 @@ package practice.coffeemachine
 
 class `main,` {
     fun `main,`() {
-        println("Starting to make a coffee in NIX office")
-        grindCoffeeBeans()
-        boilWater()
-        mixWaterWithCoffee()
-        pourCoffee()
-        pourMilk()
-        println("Coffee is ready! Go to work!")
-    }
+        // Кількість стаканчиків кави, яку користувач хоче приготувати
+        println("Write how many cups of coffee you will need:")
+        val cupsOfCoffee = readLine()!!.toInt()
 
-    fun grindCoffeeBeans() {
-        println("Grinding coffee beans")
-    }
+        // Обчислення кількості інгредієнтів для приготування зазначеної кількості стаканчиків кави
+        val water = cupsOfCoffee * 200
+        val milk = cupsOfCoffee * 50
+        val coffeeBeans = cupsOfCoffee * 15
 
-    fun boilWater() {
-        println("Boiling water")
-    }
-
-    fun mixWaterWithCoffee() {
-        println("Mixing boiled water with crushed coffee beans")
-    }
-
-    fun pourCoffee() {
-        println("Pouring coffee into the cup")
-    }
-
-    fun pourMilk() {
-        println("Pouring some milk into the cup")
+        // Виведення результатів
+        println("For $cupsOfCoffee cups of coffee you will need:")
+        println("$water ml of water")
+        println("$milk ml of milk")
+        println("$coffeeBeans g of coffee beans")
     }
 }
